@@ -1,0 +1,26 @@
+{
+  "manifest_version": 3,
+  "name": "QuoteUp",
+  "version": "1.0.0",
+  "description": "Get inspired daily with customizable quotes tailored to fit your style and boost your motivation!",
+  "permissions": ["activeTab", "bookmarks"],
+  "background": {
+    "service_worker": "background.js"
+  },
+
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"]
+    }
+  ],
+  "web_accessible_resources": [
+    {
+      "resources": ["quotes.json"],
+      "matches": ["<all_urls>"]
+    }
+  ],
+  "chrome_url_overrides": {
+    "newtab": "index.html"
+  }
+}
