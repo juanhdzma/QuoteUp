@@ -1,26 +1,26 @@
 {
   "manifest_version": 3,
   "name": "QuoteUp",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "Get inspired daily with customizable quotes tailored to fit your style and boost your motivation!",
-  "permissions": ["activeTab", "bookmarks"],
-  "background": {
-    "service_worker": "background.js"
+  "icons": {
+    "16": "./assets/logo/16.png",
+    "48": "./assets/logo/48.png",
+    "128": "./assets/logo/128.png"
   },
-
-  "content_scripts": [
-    {
-      "matches": ["<all_urls>"],
-      "js": ["content.js"]
-    }
-  ],
+  "permissions": [],
   "web_accessible_resources": [
     {
-      "resources": ["quotes.json"],
+      "resources": [
+        "./data/quotes.json",
+        "./assets/logo/16.png",
+        "./assets/logo/48.png",
+        "./assets/logo/128.png"
+      ],
       "matches": ["<all_urls>"]
     }
   ],
   "chrome_url_overrides": {
-    "newtab": "index.html"
+    "newtab": "./pages/index.html"
   }
 }

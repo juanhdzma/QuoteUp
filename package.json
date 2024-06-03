@@ -1,6 +1,6 @@
 {
   "name": "quoteup",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "main": "index.js",
   "directories": {
     "test": "test"
@@ -11,7 +11,7 @@
   "keywords": [],
   "author": "juanhdzma",
   "license": "ISC",
-  "description": "Chrome extention to display a custom home with random quotes and personalization.",
+  "description": "Chrome extension to display a custom home page with random quotes and personalization.",
   "devDependencies": {
     "cws-publish": "^2.1.1",
     "eslint": "^9.4.0",
