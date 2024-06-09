@@ -1,6 +1,6 @@
 {
-  "name": "quoteup",
-  "version": "1.1.0",
+  "name": "tabquotes",
+  "version": "1.2.0",
   "main": "index.js",
   "directories": {
     "test": "test"

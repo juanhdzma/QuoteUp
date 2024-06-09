@@ -1,14 +1,14 @@
 {
   "manifest_version": 3,
-  "name": "QuoteUp",
-  "version": "1.1.0",
+  "name": "TabQuotes",
+  "version": "1.2.0",
   "description": "Get inspired daily with customizable quotes tailored to fit your style and boost your motivation!",
   "icons": {
     "16": "./assets/logo/16.png",
     "48": "./assets/logo/48.png",
     "128": "./assets/logo/128.png"
   },
-  "permissions": [],
+  "permissions": ["storage"],
   "web_accessible_resources": [
     {
       "resources": [

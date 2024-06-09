@@ -1,81 +1,101 @@
 [
   {
+    "id": 1,
     "quote": "It always seems impossible until it's done.",
     "author": "Nelson Mandela"
   },
   {
+    "id": 2,
     "quote": "It's when the 'international community' expresses 'concern' about your 'situation' that your situation is well and truly fucked.",
     "author": "Michael D. Weiss"
   },
   {
+    "id": 3,
     "quote": "Ideas are worth nothing unless backed by application. The smallest of implementations is always worth more than the grandest of intentions.",
     "author": "Robin S. Sharma"
   },
   {
+    "id": 4,
     "quote": "Be yourself; everyone else is already taken.",
     "author": "Oscar Wilde"
   },
   {
+    "id": 5,
     "quote": "You know you're in love when you can't fall asleep because reality is finally better than your dreams.",
     "author": "Dr. Seuss"
   },
   {
+    "id": 6,
     "quote": "Be the change that you wish to see in the world.",
     "author": "Mahatma Gandhi"
   },
   {
+    "id": 7,
     "quote": "Without music, life would be a mistake.",
     "author": "Friedrich Nietzsche"
   },
   {
+    "id": 8,
     "quote": "To be yourself in a world that is constantly trying to make you something else is the greatest accomplishment.",
     "author": "Ralph Waldo Emerson"
   },
   {
+    "id": 9,
     "quote": "Insanity is doing the same thing, over and over again, but expecting different results.",
     "author": "Anonymous"
   },
   {
+    "id": 10,
     "quote": "It is better to be hated for what you are than to be loved for what you are not.",
     "author": "Andre Gide"
   },
   {
+    "id": 11,
     "quote": "It is better to remain silent at the risk of being thought a fool, than to talk and remove all doubt of it.",
     "author": "Maurice Switzer"
   },
   {
+    "id": 12,
     "quote": "Any fool can know. The point is to understand.",
     "author": "Albert Einstein"
   },
   {
+    "id": 13,
     "quote": "Think before you speak. Read before you think.",
     "author": "Fran Lebowitz"
   },
   {
+    "id": 14,
     "quote": "Yesterday I was clever, so I wanted to change the world. Today I am wise, so I am changing myself.",
     "author": "Rumi"
   },
   {
+    "id": 15,
     "quote": "The price good men pay for indifference to public affairs is to be ruled by evil men.",
     "author": "Plato"
   },
   {
+    "id": 16,
     "quote": "You only live twice: Once when you are born. And once when you look death in the face.",
     "author": "Ian Fleming"
   },
   {
+    "id": 17,
     "quote": "It is not a lack of love, but a lack of friendship that makes unhappy marriages.",
     "author": "Friedrich Nietzsche"
   },
   {
+    "id": 18,
     "quote": "Perfect don’t mean that it’s working.",
     "author": "Joji"
   },
   {
+    "id": 19,
     "quote": "If you ever ask me how many times you’ve crossed my mind, I would say once. Because you came, and never left.",
     "author": "Ritu Ghatourey"
   },
   {
+    "id": 20,
     "quote": "No confundas la independencia con la soledad.",
     "author": "Animal Crossing"
   }

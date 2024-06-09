@@ -5,6 +5,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="../styles/index.css">
+  <link rel="stylesheet" href="../styles/black.css">
   <title>New Tab</title>
 </head>
 
@@ -13,17 +14,30 @@
     <div class="quote-container">
       <div id="quote"></div>
       <div id="author"></div>
+      <div id="quoteID"></div>
       <div class="buttons">
-        <button class="icon-button" id="nextButton">
-          <img alt="Next button" src="../assets/icon/next.png">
-        </button>
-        <button class="icon-button">
-          <img alt="Favorite button" src="../assets/icon/no_favorite.png">
-        </button>
-        <button class="icon-button" id="copyButton">
-          <img alt="Copy button" src="../assets/icon/copy.png">
+        <div class="icon-button" id="nextButton">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16">
+            <path fill="currentColor"
+              d="M8 0a8 8 0 1 1 0 16A8 8 0 0 1 8 0m0 14.5a6.5 6.5 0 1 0 0-13a6.5 6.5 0 0 0 0 13" />
+            <path fill="currentColor" d="M9 8L5 5v6zm2-3H9v6h2z" />
+          </svg>
+        </div>
+        <div class="icon-button" id="likeButton">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+            <path id='likeImage' fill="currentColor"
+              d="m12.1 18.55l-.1.1l-.11-.1C7.14 14.24 4 11.39 4 8.5C4 6.5 5.5 5 7.5 5c1.54 0 3.04 1 3.57 2.36h1.86C13.46 6 14.96 5 16.5 5c2 0 3.5 1.5 3.5 3.5c0 2.89-3.14 5.74-7.9 10.05M16.5 3c-1.74 0-3.41.81-4.5 2.08C10.91 3.81 9.24 3 7.5 3C4.42 3 2 5.41 2 8.5c0 3.77 3.4 6.86 8.55 11.53L12 21.35l1.45-1.32C18.6 15.36 22 12.27 22 8.5C22 5.41 19.58 3 16.5 3" />
+          </svg>
+        </div>
+        <div class="icon-button" id="copyButton">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+            <g fill="none">
+              <path fill="currentColor"
+                d="M19 2a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2h-2v2a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h2V4a2 2 0 0 1 2-2zm-4 6H5v12h10zm-5 7a1 1 0 1 1 0 2H8a1 1 0 1 1 0-2zm9-11H9v2h6a2 2 0 0 1 2 2v8h2zm-7 7a1 1 0 0 1 .117 1.993L12 13H8a1 1 0 0 1-.117-1.993L8 11z" />
+            </g>
+          </svg>
           <div id="copyFeedback" class="copy-feedback">Copied!</div>
-        </button>
+        </div>
       </div>
     </div>
   </div>
