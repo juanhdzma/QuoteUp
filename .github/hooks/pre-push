@@ -1,0 +1,19 @@
+#!/bin/sh
+
+files=("src/manifest.json" "package.json")
+all_modified=true
+
+for file in "${files[@]}"
+do
+    if ! git diff --cached --name-only | grep -q "$file"; then
+        echo "Error: $file has not been modified."
+        all_modified=false
+    fi
+done
+
+if [ "$all_modified" = false ]; then
+    echo "Error: Both manifest.json and package.json must be modified before pushing."
+    exit 1
+fi
+
+echo "Both manifest.json and package.json files have been modified. Proceeding with push."
