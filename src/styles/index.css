@@ -22,7 +22,6 @@
 
 .quote-container {
   width: 60%;
-  text-align: justify;
   position: relative;
 }
 
@@ -31,6 +30,7 @@
   font-weight: bold;
   opacity: 1;
   transition: opacity 0.5s;
+  text-align: justify;
   color: var(--principal);
 }
 
