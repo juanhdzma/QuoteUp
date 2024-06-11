@@ -25,10 +25,12 @@ document.addEventListener('DOMContentLoaded', () => {
 function displayRandomQuote() {
   const quote = document.getElementById('quote');
   const author = document.getElementById('author');
+  const category = document.getElementById('category');
   const id = document.getElementById('quoteID');
   const image = document.getElementById('likeImage');
   quote.style.opacity = 0;
   author.style.opacity = 0;
+  category.style.opacity = 0;
   const randomQuote = quotes[Math.floor(Math.random() * quotes.length)];
   if ('"' + randomQuote.content + '"' === quote.innerHTML) {
     displayRandomQuote();
@@ -37,6 +39,7 @@ function displayRandomQuote() {
     setTimeout(() => {
       quote.innerHTML = '"' + randomQuote.content + '"';
       author.innerHTML = '- ' + randomQuote.author;
+      category.innerHTML = randomQuote.category;
       id.innerHTML = randomQuote.id;
       quotesIsLiked(randomQuote.id, isLiked => {
         if (isLiked) {
@@ -47,6 +50,7 @@ function displayRandomQuote() {
       });
       quote.style.opacity = 1;
       author.style.opacity = 1;
+      category.style.opacity = 1;
     }, time);
   }
 }

@@ -21,8 +21,8 @@
 }
 
 .quote-container {
-  width: 70%;
-  text-align: left;
+  width: 60%;
+  text-align: justify;
   position: relative;
 }
 
@@ -34,8 +34,21 @@
   color: var(--principal);
 }
 
+.subcontainer {
+  padding-top: 2em;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
 #author {
-  padding-top: 30px;
+  font-size: 2em;
+  opacity: 1;
+  transition: opacity 0.5s;
+  color: var(--subtitle);
+}
+
+#category {
   font-size: 2em;
   opacity: 1;
   transition: opacity 0.5s;
@@ -84,13 +97,12 @@
 .buttons {
   display: flex;
   justify-content: flex-end;
-  margin-right: 4em;
-  margin-top: 20px;
+  padding-top: 0.5em;
 }
 
 .copy-feedback {
   position: absolute;
-  top: -40px;
+  top: 40px;
   padding: 5px 10px;
   background-color: var(--principal);
   color: var(--background);
