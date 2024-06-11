@@ -1,20 +1,26 @@
 {
   "name": "tabquotes",
-  "version": "1.2.0",
+  "version": "1.2.1",
   "main": "index.js",
+  "type": "module",
   "directories": {
     "test": "test"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "lint": "npx eslint .",
+    "format": "prettier --write .",
+    "security": "npm audit fix",
+    "pre-push": "npm run lint && npm run format && npm run security"
   },
   "keywords": [],
   "author": "juanhdzma",
-  "license": "ISC",
+  "license": "MIT",
   "description": "Chrome extension to display a custom home page with random quotes and personalization.",
   "devDependencies": {
     "cws-publish": "^2.1.1",
     "eslint": "^9.4.0",
-    "jest": "^29.7.0"
+    "jest": "^29.7.0",
+    "prettier": "^3.3.1"
   }
 }

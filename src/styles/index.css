@@ -27,7 +27,7 @@
 }
 
 #quote {
-  font-size: 60px;
+  font-size: 3.5em;
   font-weight: bold;
   opacity: 1;
   transition: opacity 0.5s;
@@ -36,7 +36,7 @@
 
 #author {
   padding-top: 30px;
-  font-size: 30px;
+  font-size: 2em;
   opacity: 1;
   transition: opacity 0.5s;
   color: var(--subtitle);
@@ -48,8 +48,11 @@
   justify-content: center;
   border: none;
   background: none;
-  height: 42px;
-  transition: filter 0.5s, opacity 0.5s, transform 0.1s;
+  height: 2.5em;
+  transition:
+    filter 0.5s,
+    opacity 0.5s,
+    transform 0.1s;
   cursor: pointer;
   margin-left: 40px;
   position: relative;
@@ -81,7 +84,7 @@
 .buttons {
   display: flex;
   justify-content: flex-end;
-  margin-right: 100px;
+  margin-right: 4em;
   margin-top: 20px;
 }
 
