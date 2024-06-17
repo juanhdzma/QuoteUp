@@ -10,8 +10,16 @@ document
   .addEventListener('click', displayRandomQuote);
 document.getElementById('copyButton').addEventListener('click', copyQuote);
 document.getElementById('likeButton').addEventListener('click', likeManager);
+document.getElementById('configButton').addEventListener('click', configDisplay);
+document.getElementById('principalColor').addEventListener('input', setCurrentColor);
+document.getElementById('subtitleColor').addEventListener('input', setCurrentColor);
+document.getElementById('backgroundColor').addEventListener('input', setCurrentColor);
+document.querySelectorAll('.color-section').forEach(function (element) {
+  element.addEventListener('click', changeDefaultColor);
+});
 
 document.addEventListener('DOMContentLoaded', () => {
+  initializeColors();
   readFile().then(file => {
     quotes = file;
     if (quotes) {
@@ -115,4 +123,68 @@ function quotesIsLiked(id, callback) {
     let tmpQuotes = result.favoriteQuotes || [];
     callback(tmpQuotes.includes(id));
   });
+}
+
+function configDisplay() {
+  const configContainer = document.querySelector('.configContainer');
+  const mainContainer = document.querySelector('.mainContainer');
+
+  if (configContainer.style.width === '0px' || configContainer.style.width === '') {
+    configContainer.style.width = '20%';
+    mainContainer.style.width = '80%';
+  } else {
+    configContainer.style.width = '0';
+    mainContainer.style.width = '100%';
+    changeCurrentColor();
+  }
+}
+
+function initializeColors() {
+  chrome.storage.sync.get(['colorScheme'], result => {
+    const colors = result.colorScheme || {
+      "principal": "#e4e4e4",
+      "subtitle": "#8a8a8a",
+      "background": "#242424"
+    };
+
+    const root = document.documentElement;
+    root.style.setProperty('--principal', colors.principal);
+    root.style.setProperty('--subtitle', colors.subtitle);
+    root.style.setProperty('--background', colors.background);
+
+    document.getElementById('principalColor').value = colors.principal;
+    document.getElementById('subtitleColor').value = colors.subtitle;
+    document.getElementById('backgroundColor').value = colors.background;
+  });
+}
+
+function setCurrentColor() {
+  const root = document.documentElement;
+  root.style.setProperty('--principal', document.getElementById('principalColor').value);
+  root.style.setProperty('--subtitle', document.getElementById('subtitleColor').value);
+  root.style.setProperty('--background', document.getElementById('backgroundColor').value);
+}
+
+function changeCurrentColor() {
+  chrome.storage.sync.set({
+    colorScheme: {
+      "principal": document.getElementById('principalColor').value,
+      "subtitle": document.getElementById('subtitleColor').value,
+      "background": document.getElementById('backgroundColor').value
+    }
+  });
+}
+
+function changeDefaultColor(event) {
+  const id = event.target.id;
+  const [principal, subtitle, background] = id.split("-");
+
+  const root = document.documentElement;
+  root.style.setProperty('--principal', principal);
+  root.style.setProperty('--subtitle', subtitle);
+  root.style.setProperty('--background', background);
+
+  document.getElementById('principalColor').value = principal;
+  document.getElementById('subtitleColor').value = subtitle;
+  document.getElementById('backgroundColor').value = background;
 }

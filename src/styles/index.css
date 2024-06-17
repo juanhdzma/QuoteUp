@@ -5,6 +5,7 @@
 }
 
 * {
+  font-size: 0.8rem;
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -14,10 +15,22 @@
 
 .container {
   display: flex;
+  width: 100%;
+  height: 100%;
+}
+
+.subContainer {
+  display: flex;
+}
+
+.mainContainer {
   justify-content: center;
   align-items: center;
   height: 100vh;
+  width: 100%;
   flex-direction: column;
+  position: relative;
+  transition: width 0.5s ease;
 }
 
 .quote-container {
@@ -26,7 +39,7 @@
 }
 
 #quote {
-  font-size: 3.5em;
+  font-size: 4em;
   font-weight: bold;
   opacity: 1;
   transition: opacity 0.5s;
@@ -34,7 +47,7 @@
   color: var(--principal);
 }
 
-.subcontainer {
+.infoContainer {
   padding-top: 2em;
   display: flex;
   justify-content: space-between;
@@ -70,23 +83,11 @@
   position: relative;
 }
 
-.icon-button svg {
-  width: 100%;
-  height: 100%;
-  -webkit-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-  transition: fill 1s;
-  cursor: pointer;
-}
-
 .icon-button svg:hover path {
   fill: var(--subtitle);
 }
 
 .icon-button svg path {
-  width: 100%;
-  height: 100%;
   fill: var(--principal);
 }
 
@@ -113,6 +114,133 @@
   font-size: 15px;
 }
 
+svg {
+  width: 100%;
+  height: 100%;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  transition: fill 1s;
+  cursor: pointer;
+}
+
 #quoteID {
   visibility: hidden;
+}
+
+#configButton {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  height: 42px;
+  width: 42px;
+}
+
+#developedBy {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  color: var(--subtitle);
+}
+
+#configButton svg path {
+  fill: var(--principal);
+}
+
+#configButton svg:hover path {
+  fill: var(--subtitle);
+}
+
+a {
+  text-decoration: none;
+  color: var(--principal);
+  font-weight: bold;
+}
+
+#configButton:hover {
+  animation: rotate 1.5s linear infinite;
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.configContainer * {
+  background-color: var(--principal);
+  color: var(--background);
+}
+
+.configContainer {
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  position: relative;
+  background-color: var(--principal);
+  height: 100vh;
+  width: 0%;
+  left: 0;
+  transition: width 0.5s ease;
+}
+
+.customColorContainer {
+  display: flex;
+}
+
+.customColorContainer .colorPicker input[type='color'] {
+  cursor: pointer;
+}
+
+.colorPicker {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.colorPicker input[type='color'] {
+  width: 6em;
+  height: 4em;
+  border: none;
+}
+
+.configSubtitle {
+  color: var(--background);
+  font-size: 2em;
+  font-weight: bold;
+  padding-bottom: 0.5em;
+  white-space: nowrap;
+}
+
+.configurationDivision {
+  text-align: center;
+  justify-content: center;
+  margin-top: 2em;
+  padding: 1em;
+}
+
+.color-container {
+  display: flex;
+  width: 8em;
+  height: 3em;
+  border: 1px solid var(--background);
+  transition: transform 0.4s ease;
+}
+
+.mainColorContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1em 2em;
+}
+
+.color-container:hover {
+  transform: scale(1.2);
+}
+
+.color-section {
+  flex: 1;
 }
